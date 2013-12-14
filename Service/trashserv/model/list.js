@@ -2,6 +2,7 @@
  * New node file
  */
 var mongoose = require('mongoose');
+var config = require('../config');
 
 exports.getLoc = function list(callback, lat, log) {
 	var COMPLAINT = mongoose.model('COMPLAINT');
@@ -9,7 +10,7 @@ exports.getLoc = function list(callback, lat, log) {
 	COMPLAINT.find({
 		"loc" : {
 			"$near" : [ lat, log ],
-			"$maxDistance" : 0.44996
+			"$maxDistance" : config.radius
 		}
 	}, function(e, docs) {
 		if (e)
