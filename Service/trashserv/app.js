@@ -26,6 +26,7 @@ app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
+app.use(express.bodyParser());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -34,9 +35,15 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-//app.get('/', index.retrieve);
+//Handle Complaints
 app.get('/',index.alldata);
 app.get('/list', index.retrieve);
+app.post('/add', index.insert);
+app.put('/update',index.update);
+// Handle User Details
+app.get('/users',user.alldata);
+app.post('/users/add',user.insertuser);
+app.put('/users/update',user.updateuser);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

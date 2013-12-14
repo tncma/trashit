@@ -12,4 +12,21 @@ exports.alldata = function(req, res){
 	});
 };
 
+exports.insert = function(request, res){
+	console.log(request.body);
+		results.insert(function(err,result){
+			res.send(result);
+		}, request.body);
+	
+	
+};
 
+
+exports.update = function(request, res){
+	console.log(request.body);
+		results.update(function(err,result){
+			res.send(result);
+		},request.body);
+	
+	
+};

@@ -1,12 +1,26 @@
-
 /*
  * GET users listing.
  */
 
-var results = require('../model/list');
+var user = require('../model/user');
 
-exports.retrieve = function(req, res){
-	results.getLoc(function(err,list){
+exports.alldata = function(req, res) {
+	user.getAll(function(err, list) {
 		res.send(list);
-	}, req.query.lat,req.query.lng);
+	});
+};
+
+exports.insertuser = function(request, res) {
+	
+	user.insert(function(err, result) {
+		res.send(result);
+	}, request.body);
+
+};
+
+exports.updateuser = function(request, res) {
+	user.update(function(err, result) {
+		res.send(result);
+	}, request.body);
+
 };
