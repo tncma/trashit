@@ -12,7 +12,7 @@ TrashIt
 
 ### Idea ###
 
-TrashIt is an Android app to enable crowdsourced garbage reporting. In order to motivate users to paricipate, we introduce a gamification element to this. Key interactions of the "game" would be as follows
+TrashIt is an Android app to enable crowdsourced garbage reporting. In order to motivate users to participate, we introduce a gamification element to this. Key interactions of the "game" would be as follows
 
 	- User tags garbage with photo and is rewarded with x "bounty"
 	- User can assign "bounty" to said garbage
