@@ -101,10 +101,11 @@ public class MapActivity extends Activity {
 	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-	    // Handle item selection
 	    switch (item.getItemId()) {
-	    case R.id.create_btn:
-	        Toast.makeText(context, "Add clicked", Toast.LENGTH_SHORT).show();
+	    case R.id.create_btn:       
+	        Intent intent = new Intent("android.media.action.IMAGE_CAPTURE");
+            startActivityForResult(intent, 1003);
+            Toast.makeText(context, "Image upload listeener start", Toast.LENGTH_LONG).show();
 	        return true;	    
 	    default:
 	        return super.onOptionsItemSelected(item);
