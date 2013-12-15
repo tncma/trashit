@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Trashit</string>
+    <string name="action_settings">Settings</string>
+    <string name="create_setting">Add</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_create">CreateActivity</string>
+    <string name="title_activity_view">ViewActivity</string>
+
+</resources>
