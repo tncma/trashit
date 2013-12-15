@@ -1,9 +1,11 @@
 TRASHIT
 
 
-Team Members
-	Sesha Senthil, Chennai
-	Renuka Srivivasan, Chennai
-	Thirunavukkarasu S, Chennai
-	Charumathi Covindane, Chennai
+ Team Members
+ 
+	- Vridhachalempillay Subramaniam
+	- Sesha Senthil
+	- Renuka Srivivasan
+	- Thirunavukkarasu S
+	- Charumathi Covindane
 	
