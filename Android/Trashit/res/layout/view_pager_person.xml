@@ -11,12 +11,13 @@
         android:text="Bounty - 250"
         android:textColor="#040404"
         android:typeface="sans"
-        android:textSize="15dip"
+        android:textSize="35dip"
         android:textStyle="bold"/>
     
     <ListView
             android:id="@+id/userlist"
-            android:layout_alignBottom="@+id/title"
+            android:padding="15px"
+            android:layout_alignBaseline="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
         </ListView>
