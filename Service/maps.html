@@ -1,0 +1,296 @@
+<!DOCTYPE html >
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <title>Report Consolidation</title>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script src="./jquery-2.0.3.min.js"></script>
+  
+
+  </head>
+
+  <body>
+    <div id="map" style="width: 1000px; height: 1000px"></div>
+  </body>
+  <script type="text/javascript">
+  $(document).ready(function() {
+
+			var customIcons = {
+			  restaurant: {
+				icon: 'http://labs.google.com/ridefinder/images/mm_20_blue.png'
+			  },
+			  bar: {
+				icon: 'http://labs.google.com/ridefinder/images/mm_20_red.png'
+			  }
+			};
+	function load() {
+			  var map = new google.maps.Map(document.getElementById("map"), {
+				center: new google.maps.LatLng(13.0051, 80.1933),
+				zoom: 13,
+				mapTypeId: google.maps.MapTypeId.TERRAIN
+			  });
+			  var infoWindow = new google.maps.InfoWindow;
+
+			  // Change this depending on the name of your PHP file
+			  var JSONResponse = {
+    "respons": [
+  {
+    "address": "Adyar",
+    "status": "Open",
+    "bounty": "1",
+    "type": "urgent",
+    "finalImagePath": "",
+    "_id": "52ac3f4ec34c4c7c1d000002",
+    "__v": 0,
+    "complaints": [
+      {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000003"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000003"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000003"
+      }
+    ],
+    "loc": [
+      13.0011774,
+      80.2564957
+    ]
+  },
+  {
+    "address": "Porur",
+    "status": "Open",
+    "bounty": "1",
+    "type": "urgent",
+    "finalImagePath": "",
+    "_id": "52ac3f4ec34c4c7c1d000004",
+    "__v": 0,
+    "complaints": [
+      {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000005"
+      }
+    ],
+    "loc": [
+      13.0424661,
+      80.1570129
+    ]
+  },
+  {
+    "address": "Porur",
+    "status": "Open",
+    "bounty": "1",
+    "type": "urgent",
+    "finalImagePath": "",
+    "_id": "52ac3f4ec34c4c7c1d000006",
+    "__v": 0,
+    "complaints": [
+      {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },
+	  {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },{
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      },{
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac3f4ec34c4c7c1d000007"
+      }
+	  
+    ],
+    "loc": [
+      11.931,
+      79.7852
+    ]
+  },
+  {
+    "address": "Adyar -Hindu Senior Secondary School",
+    "status": "Open",
+    "bounty": "1",
+    "type": "urgent",
+    "finalImagePath": "",
+    "_id": "52ac814a390b6e9c25000002",
+    "__v": 0,
+    "complaints": [
+      {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac814a390b6e9c25000003"
+      }
+    ],
+    "loc": [
+      13.001177,
+      80.256496
+    ]
+  },
+  {
+    "address": "Adyar - Adyar Ananda Bhavan",
+    "status": "Open",
+    "bounty": "1",
+    "type": "urgent",
+    "finalImagePath": "",
+    "_id": "52ac814a390b6e9c25000004",
+    "__v": 0,
+    "complaints": [
+      {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac814a390b6e9c25000005"
+      }
+    ],
+    "loc": [
+      12.997023,
+      80.258072
+    ]
+  },
+  {
+    "address": "Adyar - RajivGandhi IT Express Way",
+    "status": "Open",
+    "bounty": "1",
+    "type": "urgent",
+    "finalImagePath": "",
+    "_id": "52ac814a390b6e9c25000006",
+    "__v": 0,
+    "complaints": [
+      {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac814a390b6e9c25000007"
+      }
+    ],
+    "loc": [
+      12.921172,
+      80.230361
+    ]
+  },
+  {
+    "address": "Thiruvanmiyur - Thiruvanmiyur",
+    "status": "Open",
+    "bounty": "1",
+    "type": "urgent",
+    "finalImagePath": "",
+    "_id": "52ac814a390b6e9c25000008",
+    "__v": 0,
+    "complaints": [
+      {
+        "mobile": "123",
+        "bounty": "1",
+        "imagePath": "",
+        "_id": "52ac814a390b6e9c25000009"
+      }
+    ],
+    "loc": [
+      12.989531,
+      80.251391
+    ]
+  }
+]
+};
+				
+			
+				
+				JSONResponse["respons"].forEach(function(result){ 
+				 
+								
+						  var name = result._id;
+						 var type='bar';
+						  
+						 
+						  var point = new google.maps.LatLng(
+							  parseFloat(result.loc[0]),
+							  parseFloat(result.loc[1]));
+						  var html = "<b>" + name + "</b> <br/>" ;
+						  var icon = customIcons[type] || {};
+						  var myLatlng = new google.maps.LatLng(result.loc[0],result.loc[1]);
+		 
+						  var marker = new google.maps.Marker({
+							position: myLatlng,
+							map: map,
+							title: name,
+							icon: getCircle(result.complaints.length)
+						  });
+						  bindInfoWindow(marker, map, infoWindow, html);
+						});
+			 
+		}
+
+    function bindInfoWindow(marker, map, infoWindow, html) {
+      google.maps.event.addListener(marker, 'click', function() {
+        infoWindow.setContent(html);
+        infoWindow.open(map, marker);
+      });
+    }
+	
+	function getCircle(magnitude) {
+  return {
+    
+	path: google.maps.SymbolPath.CIRCLE,
+    fillColor: 'red',
+    fillOpacity: (.2*magnitude),
+    scale: 15,
+    strokeColor: 'white',
+    strokeWeight: .5
+  };
+  }
+	
+	load();
+    });
+
+  </script>
+</html>
